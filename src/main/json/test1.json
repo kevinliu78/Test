@@ -1,0 +1,8 @@
+{"CMDATA":[{"taskId":"99","dts":"1498180962451","mac":"001fa493784d","gridId":"9999","gridName":"黄沙网格2","odnCode":"010201090200096","odnAddress":"黄沙后道10号","cmAddress":"黄沙后道10号",
+"upChannelId":"4","mtrAvg":"12.93","mtrSnrCor":"5.79","mtrVar":"5.79","snrAvg":"22","snrVar":"3","upFreq":"56",
+"status":"1"	,"mtr":"10.10","handleStatus":"UNTREATED","cmtsIp": "192.168.22.105","ip": "192.168.22.100",
+"customerName":"kevin","customerPhone":"18511585016","businessType":"interactive"},
+{"taskId":"99","dts":"1498180962451","mac":"001fa493785e","gridId":"9999","gridName":"黄沙网格2","odnCode":"010201090200096","odnAddress":"黄沙后道10号","cmAddress":"黄沙后道9号",
+"upChannelId":"4","mtrAvg":"17.55","mtrSnrCor":"3.01","mtrVar":"3.01","snrAvg":"22","snrVar":"3","upFreq":"52",
+"status":"1"	,"mtr":"18.95","handleStatus":"UNTREATED","cmtsIp": "192.168.22.105","ip": "192.168.22.101",
+"customerName":"jony","customerPhone":"18577882345","businessType":"interactive"}]}
