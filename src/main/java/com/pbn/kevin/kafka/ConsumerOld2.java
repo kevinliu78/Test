@@ -57,7 +57,7 @@ public class ConsumerOld2 extends ShutdownableThread {
     @Override
     public void doWork() {
         consumer.subscribe(Collections.singletonList(this.topic));
-        ConsumerRecords<Integer, String> records = consumer.poll(1000);
+        ConsumerRecords<Integer, String> records = consumer.poll(10);
         for (ConsumerRecord<Integer, String> record : records) {
             System.err.println("Received message2: (" + record.key() + ", " + record.value() + ") at offset " + record.offset());
 //		        	String message = record.value();
