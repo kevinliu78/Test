@@ -26,14 +26,14 @@ public class KafkaConsumerProducerDemo {
     public static void main(String[] args) {
 //        boolean isAsync = args.length == 0 || !args[0].trim().equalsIgnoreCase("sync");
         boolean isAsync = true;
-        Producer producerThread = new Producer(KafkaProperties.TOPIC1, isAsync);
-        producerThread.start();
+//        Producer producerThread = new Producer(KafkaProperties.TOPIC1, isAsync);
+//        producerThread.start();
 
         ConsumerOld consumer = new ConsumerOld(KafkaProperties.TOPIC1);
         consumer.start();
         
-        ConsumerOld2 consumer2 = new ConsumerOld2(KafkaProperties.TOPIC1);
-        consumer2.start();
+//        ConsumerOld2 consumer2 = new ConsumerOld2(KafkaProperties.TOPIC1);
+//        consumer2.start();
         
     }
 }

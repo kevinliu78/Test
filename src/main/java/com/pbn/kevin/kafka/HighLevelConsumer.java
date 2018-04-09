@@ -66,12 +66,13 @@ public class HighLevelConsumer {
 		while (it.hasNext()) {
 			MessageAndMetadata<byte[], byte[]> metadata = it.next();
 			String msg = String.valueOf(metadata.message());
+			System.out.println("=================");
 			System.out.println(msg);
 		}
 	}
 	
 	public static void main(String[] args) {
-		String topic = "topic1";
+		String topic = "test1";
 		String groupId = "testGroup";
 		int consumerBatch = 1;
 		HighLevelConsumer comsumer = new HighLevelConsumer(topic, groupId, consumerBatch);

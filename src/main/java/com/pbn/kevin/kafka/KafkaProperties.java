@@ -26,11 +26,10 @@ public class KafkaProperties {
 	public static final String TOPIC1 = "test1";
     public static final String KAFKA_SERVER_URL = "192.168.16.179";
     public static final int KAFKA_SERVER_PORT = 9092;
-    public static final String ZOOKEEPER_SERVER_URL = "localhost";
-    public static final int ZOOKEEPER_SERVER_PORT = 2181;
+    public static final String ZOOKEEPER_SERVERS = "192.168.16.179:2181";
     public static final int KAFKA_PRODUCER_BUFFER_SIZE = 64 * 1024;
     public static final int CONNECTION_TIMEOUT = 100000;
-    public static final String CLIENT_ID = "SimpleConsumerDemoClient";
+    public static final int SESSION_TIMEOUT = 100000;
 
     private KafkaProperties() {}
 }

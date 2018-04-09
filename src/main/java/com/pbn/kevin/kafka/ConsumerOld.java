@@ -15,6 +15,7 @@ import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.quartz.CronScheduleBuilder;
 
 /*
  * Licensed to the Apache Software Foundation (ASF) under one or more
@@ -57,7 +58,7 @@ public class ConsumerOld extends ShutdownableThread {
     @Override
     public void doWork() {
         consumer.subscribe(Collections.singletonList(this.topic));
-        ConsumerRecords<Integer, String> records = consumer.poll(10);
+        ConsumerRecords<Integer, String> records = consumer.poll(10000);
         for (ConsumerRecord<Integer, String> record : records) {
             System.err.println("Received message1: (" + record.key() + ", " + record.value() + ") at offset " + record.offset());
 //		        	String message = record.value();
