@@ -7,7 +7,7 @@ package com.kevin.test.thread;
  */
 public class ThreadSafeTest implements Runnable {
 
-	int num = 10;
+	int num = 0;
 	
 	@Override
 	public void run() {
@@ -17,13 +17,13 @@ public class ThreadSafeTest implements Runnable {
 	}
 	
 	public synchronized void doIt() {
-		if(num > 0) {
+		if(num < 10) {
 			try {
-				Thread.sleep(1000);
+//				Thread.sleep(1000);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			System.out.println("剩余票张数："+ --num);
+			System.out.println("剩余票张数："+ ++num);
 		}
 	}
 	

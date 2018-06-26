@@ -19,6 +19,7 @@ public class ConfigUtil
     
     private static final SimpleDateFormat sdfDateTime = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 	private static final SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd");
+	private static final SimpleDateFormat sdfDateTime24 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
 //    public static Charset getCharSet()
 //    {
@@ -32,6 +33,15 @@ public class ConfigUtil
 			return null;
 
 		return sdfDate.format(date);
+	}
+	
+	public static String formatDate24(Date date)
+	{
+
+		if(date == null)
+			return null;
+
+		return sdfDateTime24.format(date);
 	}
 
 	public static String formatDateTime(Date date)
