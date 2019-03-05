@@ -149,6 +149,23 @@ public class ConfigUtil
 		return 0d;
 	}
 	
+	/**
+	 * double保留两位小数
+	 * @author kevin
+	 * @param o
+	 * @return
+	 */
+	public static double roundNumber(double o)
+	{       
+		try
+		{			
+			return NumberUtil.parseNumber(o,2);
+		}
+		catch(NumberFormatException e)
+		{
+			return 0;
+		}		
+	}
 	
 	/**
 	 * Float保留两位小数
@@ -159,6 +176,24 @@ public class ConfigUtil
 	public static Float roundNumber(Float o)
 	{
 		return roundNumber((float)o);
+	}
+	
+	/**
+	 * float保留两位小数
+	 * @author kevin
+	 * @param o
+	 * @return
+	 */
+	public static float roundNumber(float o)
+	{       
+		try
+		{			
+			return NumberUtil.parseNumber(o,2);
+		}
+		catch(NumberFormatException e)
+		{
+			return 0;
+		}		
 	}
 	
 }

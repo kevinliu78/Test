@@ -25,7 +25,8 @@ public class TestSort {
 		
 		
 		
-		testArrayNodeSort();
+//		testArrayNodeSort();
+		testListInt();
 	}
 	public static String getMinMtrUpFreq(String upFreqStr,String mtrStr) {
 		if(upFreqStr != null && !upFreqStr.isEmpty() && mtrStr != null && !mtrStr.isEmpty()) {
@@ -70,5 +71,21 @@ public class TestSort {
 		}
 		response.putPOJO("mutliChannel", mutliChannel);
 		System.out.println(Convert.toJson(response));
+	}
+	
+	public static void testListInt() {
+		List<Integer> mutliChannel =  new ArrayList<Integer>();
+		mutliChannel.add(2);
+		mutliChannel.add(0);
+		mutliChannel.add(1);
+		mutliChannel.add(-1);
+		mutliChannel.add(3);
+		
+		if(mutliChannel != null && mutliChannel.size()>1) {
+			Collections.sort(mutliChannel,(o1,o2) -> {	
+				return o2-o1;
+			});
+		}
+		System.out.println(Convert.toJson(mutliChannel));
 	}
 }

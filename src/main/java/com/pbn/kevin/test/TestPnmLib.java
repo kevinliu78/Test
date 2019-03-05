@@ -15,14 +15,22 @@ public class TestPnmLib {
 		String s3 = "7f:f0:00:00";
 		String s4 = "fe:30:00:00";
 		
-		int fr = parseFourNibbles("7ff0");
-		int fi = parseFourNibbles("0000");
+		int fr = parseFourNibbles("000a");
+		int fi = parseFourNibbles("000b");
 		double CMFRN = 10 * Math.log((new Complex(fr,fi).abs()) / (new Complex(4095,0).abs()));
 		System.out.println(CMFRN);
-		int fr1 = parseThreeNibbles("fe30");
-		int fi1 = parseThreeNibbles("0000");
+		int fr1 = parseThreeNibbles("07e7");
+		int fi1 = parseThreeNibbles("0138");
 		double CMFRN1 = 10 * Math.log((new Complex(fr1,fi1).abs()) / (new Complex(4095,0).abs()));
 		System.out.println(CMFRN1);
+		int fr2 = parseFourNibbles("05c1");
+		int fi2 = parseFourNibbles("fa73");
+		double CMFRN2 = 10 * Math.log((new Complex(fr,fi).abs()) / (new Complex(4095,0).abs()));
+		System.out.println(CMFRN2);
+		int fr3 = parseThreeNibbles("0784");
+		int fi3 = parseThreeNibbles("fd46");
+		double CMFRN3 = 10 * Math.log((new Complex(fr1,fi1).abs()) / (new Complex(4095,0).abs()));
+		System.out.println(CMFRN3);
 	}
 	public static int parseFourNibbles(String strFourNibbles)
 	{

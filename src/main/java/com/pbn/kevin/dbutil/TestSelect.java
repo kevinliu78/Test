@@ -21,7 +21,7 @@ public class TestSelect {
 			pstmt = (PreparedStatement) con.prepareStatement(sql);
 			java.sql.ResultSet rs = pstmt.executeQuery();
 			while(rs.next()){
-				newid = rs.getInt(1);
+				newid = rs.getInt(1) + 1;
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

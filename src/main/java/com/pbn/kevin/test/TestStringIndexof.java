@@ -1,0 +1,20 @@
+package com.pbn.kevin.test;
+/**
+ * @author kevin
+ * @version 创建时间: Dec 24, 20181:29:06 PM
+ * @ClassName 类名称
+ * @Description 类描述
+ */
+public class TestStringIndexof {
+	public static void main(String[] args) {
+		String s= "(106.120.84.194)-1545629473050_c445ec0c9cb6_11.235.242.39";
+		String[] arr = s.split("_");
+		// userId like "admin(192.168.11.131)-1823829839"
+		String userId = arr[0];
+		if(userId.contains("-")){
+			userId = userId.substring(0, userId.indexOf("-"));
+		}
+		String cmMac = arr[1];
+		System.out.println(userId+"====="+cmMac);
+	}
+}
