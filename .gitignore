@@ -17,3 +17,4 @@ target/classes/META-INF/MANIFEST.MF
 *.prefs
 
 ,idea/*
+.idea/dictionaries/kevin.xml
