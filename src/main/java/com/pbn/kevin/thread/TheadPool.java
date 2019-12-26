@@ -76,6 +76,7 @@ public class TheadPool {
 		 * 创建任务
 		 */
 		Runnable testRunnable = new Runnable() {
+			@Override
 			public void run() {
 				try {
 					//睡眠两秒
@@ -165,7 +166,7 @@ public class TheadPool {
 
 		 *  总结：
 			当队列是SynchronousQueue时，超出核心线程的任务会创建新的线程来执行，看到一共有6个线程。
-			但是这些线程是费核心线程，收超时时间限制，在任务完成后限制超过5秒就会被回收。所以最后看到线程池还是只有三个线程。
+			但是这些线程是非核心线程，受超时时间限制，在任务完成后限制超过5秒就会被回收。所以最后看到线程池还是只有三个线程。
 		 */
 //		ThreadPoolExecutor executor = new ThreadPoolExecutor(3, 6, 5, TimeUnit.SECONDS, new SynchronousQueue<Runnable>());
 		/**
@@ -195,12 +196,13 @@ public class TheadPool {
 			LinkedBlockingDeque根本不受最大线程数影响。
 			但是当LinkedBlockingDeque有大小限制时就会受最大线程数影响了
 		 */
-		ThreadPoolExecutor executor = new ThreadPoolExecutor(3, 4, 5, TimeUnit.SECONDS, new LinkedBlockingDeque<Runnable>());
+//		ThreadPoolExecutor executor = new ThreadPoolExecutor(3, 4, 5, TimeUnit.SECONDS, new LinkedBlockingDeque<Runnable>());
 //		ThreadPoolExecutor executor = new ThreadPoolExecutor(3, 4, 5, TimeUnit.SECONDS, new SynchronousQueue<Runnable>());
 //		ThreadPoolExecutor executor = new ThreadPoolExecutor(3, 4, 5, TimeUnit.SECONDS, new LinkedBlockingDeque<Runnable>(2));
+		ThreadPoolExecutor executor = new ThreadPoolExecutor(3, 4, 5, TimeUnit.SECONDS, new LinkedBlockingDeque<Runnable>(1),new ThreadPoolExecutor.DiscardOldestPolicy());
 		/**
 		 * 首先为三个任务开启了三个核心线程1，2，3，然后第四个任务和第五个任务加入到队列中，
-		 * 第六个任务因为队列满了，就直接创建一个新线程4，这是一共有四个线程，没有超过最大线程数。
+		 * 第六个任务因为队列满了，就直接创建一个新线程4，这时一共有四个线程，没有超过最大线程数。
 		 * 8秒后，非核心线程收超时时间影响回收了，因此线程池只剩3个线程了。
 		 */
 		//验证核心代码

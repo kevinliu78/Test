@@ -8,8 +8,15 @@
 
 	<name>Test</name>
 	<url>http://maven.apache.org</url>
+	
+	<!--属性配置-->
+    <properties>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
 
-	<properties>
+	<!-- <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<nexus.ip>netwatch.pbnglobal.com</nexus.ip>
 		<nexus.port>8081</nexus.port>
@@ -43,7 +50,7 @@
 				<enabled>false</enabled>
 			</snapshots>
 		</pluginRepository>
-	</pluginRepositories>
+	</pluginRepositories> -->
 
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
@@ -59,7 +66,7 @@
 			<version>3.9</version>
 		</dependency>
 
-		<dependency>
+		<!-- <dependency>
 			<groupId>com.nms</groupId>
 			<artifactId>nms-common</artifactId>
 			<version>1.1.5</version>
@@ -73,7 +80,7 @@
 			<groupId>com.nms</groupId>
 			<artifactId>nms-message</artifactId>
 			<version>1.1.5</version>
-		</dependency>
+		</dependency> -->
 
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
