@@ -73,3 +73,8 @@ target/classes/META-INF/MANIFEST.MF
 .idea/misc.xml
 .idea/vcs.xml
 .idea/workspace.xml
+.idea/compiler.xml
+.idea/libraries/com_nms_nms_common_1_1_5__2_.xml
+.idea/modules.xml
+.idea/uiDesigner.xml
+Test.iml
