@@ -62,6 +62,15 @@ public class ConfigUtil
 		return sdfDate.parse(date);
 	}
 
+	public static Date parseDateTime24(String date) throws ParseException
+	{
+
+		if(date == null)
+			return null;
+
+		return sdfDateTime24.parse(date);
+	}
+
 	public static Date parseDateTime(String date) throws ParseException
 	{
 

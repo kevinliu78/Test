@@ -1,9 +1,12 @@
 package com.pbn.kevin.timer;
 
-import java.util.Calendar;
-
 import org.junit.Before;
 import org.junit.Test;
+
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 /**
  * @author kevin
@@ -102,4 +105,40 @@ public class CalendarDemo {
 
         System.out.println("现在是" + year + "年" + month + "月" + day + "日");
     }
+
+	// 获取前一天时间字符串
+	@Test
+	public void test5() {
+		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		Date date = new Date();
+		Calendar calendar = Calendar.getInstance();
+		calendar.add(Calendar.DATE,-1);
+		Date time = calendar.getTime();
+		System.out.println("today================" + df.format(date));
+		System.out.println("yesterday================" + df.format(time));
+		String ss = "24H";
+		System.out.println(ss.indexOf("H"));
+		System.out.println(ss.substring(0,ss.indexOf("H")));
+
+		double mv = 5.7546d;
+		DecimalFormat df11 = new DecimalFormat("#.00");
+		System.out.println(Double.parseDouble(df11.format(mv)));
+
+		Calendar calendar1 = Calendar.getInstance();
+		calendar1.setTime(new Date());
+		calendar1.set(Calendar.HOUR_OF_DAY, 0);
+		calendar1.set(Calendar.MINUTE, 0);
+		calendar1.set(Calendar.SECOND, 0);
+		calendar1.add(Calendar.DAY_OF_YEAR,-7);
+		Date zero = calendar1.getTime();
+		long time1 = zero.getTime();
+		for (int i=0;i<7;i++){
+			System.out.println(df.format(new Date(time1)));
+			time1+=(24*60*60*1000L);
+			System.out.println(df.format(new Date(time1)));
+			System.out.println("===================================================");
+		}
+
+		System.out.println(zero);
+	}
 }

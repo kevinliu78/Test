@@ -1,4 +1,7 @@
 package com.pbn.kevin.test;
+
+import java.text.DecimalFormat;
+
 /**
  * @author kevin
  * @version 创建时间: Mar 5, 20195:41:01 PM
@@ -7,12 +10,17 @@ package com.pbn.kevin.test;
  */
 public class TestDouble {
 	public static void main(String[] args) {
-		double startFreq = 997.6;
-		double space = 0.025;
-		for (int i = 0; i < 10; i++) {
-			System.out.println(startFreq+i*space);
-		}
-		double d1 = 997.65;
-		System.out.println(3*space);
+//		double startFreq = 997.6;
+//		double space = 0.025;
+//		for (int i = 0; i < 10; i++) {
+//			System.out.println(startFreq+i*space);
+//		}
+//		double d1 = 997.65;
+//		System.out.println(3*space);
+
+		double mv = 1.3;
+		DecimalFormat df = new DecimalFormat("#.00");
+		System.out.println(df.format(mv));
+
 	}
 }
