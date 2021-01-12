@@ -16,5 +16,14 @@ public class TestStringIndexof {
 		}
 		String cmMac = arr[1];
 		System.out.println(userId+"====="+cmMac);
+
+		String ss = "小明,小李,小赵,,,,";
+		String s1 = testLastIndexOf(ss);
+		System.out.println(s1);
+	}
+
+	private static String testLastIndexOf(String s){
+		String substring = s.substring(0, s.lastIndexOf(","));
+		return substring;
 	}
 }

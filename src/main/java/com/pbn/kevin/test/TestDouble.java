@@ -1,6 +1,11 @@
 package com.pbn.kevin.test;
 
+import com.alibaba.fastjson.JSONObject;
+import com.pbn.kevin.util.NumberUtil;
+
 import java.text.DecimalFormat;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author kevin
@@ -18,9 +23,21 @@ public class TestDouble {
 //		double d1 = 997.65;
 //		System.out.println(3*space);
 
-		double mv = 1.3;
-		DecimalFormat df = new DecimalFormat("#.00");
+		double mv = 1000.2;
+		DecimalFormat df = new DecimalFormat("0.00");
 		System.out.println(df.format(mv));
+		double v = NumberUtil.parseNumber(mv, 2);
+		System.out.println(v);
 
+		String value = "-2";
+        System.out.println(value.startsWith("-"));
+
+        Map map = new HashMap();
+        map.put("age",111);
+        map.put("name","111");
+        System.out.println(map.get("age"));
+        System.out.println(map.get("age1") == null);
+		JSONObject json = new JSONObject();
+		System.out.println(json.getString("aaaa") == null);
 	}
 }

@@ -185,6 +185,12 @@
 			<version>3.2.4</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/io.krakens/java-grok -->
+		<dependency>
+			<groupId>io.krakens</groupId>
+			<artifactId>java-grok</artifactId>
+			<version>0.1.9</version>
+		</dependency>
 
 
 
