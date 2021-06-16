@@ -31,7 +31,7 @@ public class TestStringReplace {
 
         String s3 = "1,2,3,4,5";
         String[] split = s3.split("[,]+");
-        for (String s : split){
+        for (String s : split) {
 //            System.out.println(s);
         }
 
@@ -56,8 +56,20 @@ public class TestStringReplace {
 //        System.out.println(StringUtils.contains(src, des));
 
         String content = "%causeLocation%";
-        content = StringUtils.replace(content, "%causeLocation%", "");
+        content = StringUtils.replace(content, "%causeLocation%", null);
+        System.out.println(content);
         System.out.println(content.isEmpty());
+        String errorDesc = "21AA20";
+        String z = errorDesc.replaceAll("[XxYy]", "%");
+        System.out.println(z);
+        if (z.contains("%")) {
+            String substring = z.substring(0, z.indexOf("%"));
+            System.out.println(substring);
+        }
 
+        String aa = "1,2,3,4";
+        aa = StringUtils.replace(aa,"3","");
+        aa = StringUtils.replace(aa,",,",",");
     }
+
 }
