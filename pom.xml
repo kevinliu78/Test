@@ -13,39 +13,9 @@
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<nexus.ip>netwatch.pbnglobal.com</nexus.ip>
-		<nexus.port>8081</nexus.port>
+		<!--<nexus.ip>netwatch.pbnglobal.com</nexus.ip>-->
+		<!--<nexus.port>8081</nexus.port>-->
 	</properties>
-	<repositories>
-		<repository>
-			<id>nexus</id>
-			<name>Team Nexus Repository</name>
-			<url>
-				http://${nexus.ip}:${nexus.port}/nexus/content/groups/public
-			</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<id>nexus</id>
-			<name>Team Nexus Repository</name>
-			<url>
-				http://${nexus.ip}:${nexus.port}/nexus/content/groups/public
-			</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</pluginRepository>
-	</pluginRepositories>
 
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
@@ -59,22 +29,6 @@
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
 			<version>3.9</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.nms</groupId>
-			<artifactId>nms-common</artifactId>
-			<version>1.1.5</version>
-		</dependency>
-		<dependency>
-			<groupId>com.nms</groupId>
-			<artifactId>nms-util</artifactId>
-			<version>1.1.5</version>
-		</dependency>
-		<dependency>
-			<groupId>com.nms</groupId>
-			<artifactId>nms-message</artifactId>
-			<version>1.1.5</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
