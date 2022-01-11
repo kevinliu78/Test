@@ -23,11 +23,15 @@ public class TestDouble {
 //		double d1 = 997.65;
 //		System.out.println(3*space);
 
-		double mv = 1000.2;
-		DecimalFormat df = new DecimalFormat("0.00");
+		double mv = 00.2456;
+		double mv1 = 1000;
+		DecimalFormat df = new DecimalFormat("00.##");
 		System.out.println(df.format(mv));
+		System.out.println(df.format(mv1));
 		double v = NumberUtil.parseNumber(mv, 2);
+		double v1 = NumberUtil.parseNumber(mv1, 2);
 		System.out.println(v);
+		System.out.println(v1);
 
 		String value = "-2";
         System.out.println(value.startsWith("-"));
