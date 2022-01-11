@@ -1,0 +1,333 @@
+Channel port blocking||2120||Moderate
+AL_PA value conflict||2190||Service
+Link failure1||2193||Serious
+Link failure2||2194||Serious
+SFP wrong type||21a8||Moderate
+SFP TxFault||21aa||Moderate
+External storage system connection path blocking||21d0||Moderate
+External storage system connection path restore||21d1||Service
+External storage system path response timeout||21d2||Service
+CHK1A threshold over||3070||Service
+CHK1B threshold over||3071||Service
+CHK3 threshold over||3072||Service
+Processor blocking||3073||Moderate
+CFM Failure||30750||Moderate
+Incorrect SUM value of FM||3076||Service
+Processor memory temporary error||3077||Service
+BFM error||30780||Serious
+WCHK1 dump collected||3080||Moderate
+P/S OFF impossible||388f00||Moderate
+P/S OFF impossible (Device reserved)||389f00||Moderate
+Undefined Processor is mounted||3990||Moderate
+V-R or serial number is inconsistent||3991||Moderate
+Replace failed||3993||Moderate
+MP patrol check error||39b0||Service
+LDEV Blockade (Effect of micro code error)||3a0||Moderate
+Backup/restore SM Information failed||6100||Moderate
+CHB blocking||2130||Moderate
+DKB blocking||2140||Moderate
+CHB/DKB/CTL Type disagreement||3c9500||Moderate
+No CHB mounted||3c9600||Moderate
+iSCSI firmware update warning||3c97||Moderate
+Encryption key setting abnormality||6620||Serious
+SAS CTL blocking||cf10||Moderate
+SAS PORT (WideLink) is partially blocked||cf11||Service
+SAS PORT blocked||cf12||Moderate
+SAS CTL Error Detection||cf13||Serious
+ENC Temporary Failure||cf14||Service
+PSW blockade||cf20||Moderate
+NVMe port blockade||cf22||Moderate
+CTL blocking||cf880||Moderate
+CTL blockade due to CTL interconnect path failure||cf8a0||Moderate
+LANB blocking||ff210||Moderate
+CTL patrol check error||ffcb0||Service
+CFM patrol check error||ffcc||Moderate
+GUM blocking||fff70||Moderate
+Injustice DC voltage control||399d0||Moderate
+Injustice CEMODE||399e0||Moderate
+Injustice CEDT||399f0||Moderate
+Unjust jumper setting warning||af000||Moderate
+MP temperature abnormality warning||af100||Moderate
+External temperature warning||af110||Moderate
+External temperature alarm||af120||Moderate
+Thermal monitor warning||af130||Moderate
+DKCPSU warning||af200||Moderate
+DKCPS input voltage Abnormality||af210||Moderate
+Environmental microcomputer warning||af300||Moderate
+Storage system operation mode warning||af310||Moderate
+Environment FW update warning||af320||Moderate
+Abnormal voltage change setting||af330||Moderate
+BKM/BKMF warning||af400||Moderate
+Battery replacement should be scheduled||af410||Moderate
+CHBB environmental microcontroller warning||af42||Moderate
+CHBB environmental firmware update warning||af44||Moderate
+SWPK temperature warning||af46||Moderate
+CHBB voltage change failure warning||af48||Moderate
+CHBBPS warning||af4a0||Moderate
+CHBBPS abnormal input voltage||af4b0||Moderate
+CHBBFAN warning||af4c0||Moderate
+Panel switch warning||af4d0||Moderate
+Invalid PS ON warning||af4e0||Moderate
+DBPS warning||af50||Moderate
+DBPS-1 warning||af51||Moderate
+DBPS-2 warning||af52||Moderate
+DBPS input voltage abnormality||af60||Moderate
+DBPS-1 input voltage abnormality||af61||Moderate
+DBPS-2 input voltage abnormality||af62||Moderate
+DB External temperature Warning||af7000||Moderate
+DB External temperature Alarm||af7100||Moderate
+ENC warning||af80||Moderate
+ENC-1 warning||af81||Moderate
+ENC-2 warning||af82||Moderate
+CHBB environmental firmware update started||afa0||Service
+CHBB environmental firmware update is complete||afa1||Service
+CHBB environmental firmware update was applied||afa2||Service
+UPS failed||aff00||Moderate
+GUM warning||aff10||Moderate
+CFM Error||aff20||Moderate
+FAN warning||aff30||Moderate
+PCIe cable connection error||effc||Moderate
+Expander error||effd||Moderate
+UNIT connection cable order error||effe||Moderate
+Part Installation Error||ffd400||Moderate
+Battery warning||fffa0||Moderate
+Forced volatilization warning||fffe0||Moderate
+Pinned slot||ff4||Moderate
+Area is volatilized||ffcd0||Service
+Data restoration error in the module group||ffcf||Service
+Cache correctable error||fff0||Service
+Area blocking||fff40||Serious
+Both area failed||fff50||Moderate
+Replace failed||fff90||Serious
+Cache Battery is being charged||fe0000||Serious
+End of Cache Write Through||fe010||Service
+Start of Cache Write Through||fe020||Moderate
+CFM type error or CFM shortage||fe030||Serious
+Mounting Battery shortage||fe040||Serious
+DIMM Installation mismatch||ffe800||Acute
+Cache package blockade processing end||ffc30||Service
+SM area blocking||ffe20||Serious
+Replace failed||ffe40||Serious
+Rebooted with volatilization after an instantaneous down||ffe700||Serious
+Recovery of area blocked temporarily was completed||ffea0||Service
+Configuration information restore by backup failed||ffeb00||Serious
+Area temporary blocking||ffee0||Service
+Rebooted without volatilization after an instantaneous down||ffef00||Service
+Drive port temporary error||db0||Service
+Drive port temporary error||db1||Service
+Drive port temporary error||df6||Service
+Drive port temporary error||db2||Service
+Drive port temporary error||db3||Service
+Drive port temporary error||df7||Service
+Drive temporary error||efa||Service
+Drive temporary error||efb||Service
+Drive media error||434||Service
+Drive media error||435||Service
+Drive port blockade||db4||Moderate
+Drive port blockade||db5||Moderate
+Drive port blockade||df8||Moderate
+Drive port blockade||db6||Moderate
+Drive port blockade||db7||Moderate
+Drive port blockade||df9||Moderate
+LDEV blockade||db8||Serious
+LDEV blockade||db9||Serious
+LDEV blockade||dfa||Serious
+LDEV blockade||dba||Serious
+LDEV blockade||dbb||Serious
+LDEV blockade||dfb||Serious
+Abnormal drive Link rate||dbc||Serious
+Abnormal drive Link rate||dbd||Serious
+Abnormal drive Link rate||dfc||Serious
+Abnormal drive Link rate||dbe||Serious
+Abnormal drive Link rate||dbf||Serious
+Abnormal drive Link rate||dfd||Serious
+Response late Drive||dfe||Service
+Response late Drive||dff||Service
+Drive blockade (drive)||eb0||Serious
+Drive blockade (drive)||eb1||Serious
+Drive blockade (drive)||ef0||Serious
+Drive blockade (drive)||eb2||Serious
+Drive blockade (drive)||eb3||Serious
+Drive blockade (drive)||ef1||Serious
+Drive blockade||eb4||Service
+Drive blockade||eb5||Service
+Drive blockade||ef2||Service
+Pinned slot creation||ef4||Moderate
+LDEV blockade (Effect of drive blockade)||ef8||Serious
+LDEV blockade (Effect of drive blockade)||ef9||Serious
+Correction access occurrence||eb6||Serious
+Correction access occurrence||eb7||Serious
+Correction access occurrence||efc||Serious
+Reboot suspension by the excessive write pending data||eb8||Service
+Reboot suspension by the excessive write pending data||eb9||Service
+Reboot suspension by the excessive write pending data||efe||Service
+Drive blockade (media)||43a||Serious
+Drive blockade (media)||43b||Serious
+Drive blockade (media)||43c||Serious
+Drive blockade (media)||43d||Serious
+Correction copy start||451||Service
+Correction copy start||4b6||Service
+Correction copy start||4b7||Service
+Correction copy normal end||452||Service
+Correction copy normal end||4b8||Service
+Correction copy normal end||4b9||Service
+Correction copy abnormal end||453||Serious
+Correction copy abnormal end||4ba||Serious
+Correction copy abnormal end||4bb||Serious
+Correction copy discontinued||454||Service
+Correction copy discontinued||4bc||Service
+Correction copy discontinued||4bd||Service
+Correction copy warning end (With blockade LDEV or  some error)||455||Service
+Correction copy warning end (With blockade LDEV or  some error)||4be||Service
+Correction copy warning end (With blockade LDEV or  some error)||4bf||Service
+Dynamic sparing start (Drive copy)||461||Service
+Dynamic sparing start (Drive copy)||4c6||Service
+Dynamic sparing start (Drive copy)||4c7||Service
+Dynamic sparing normal end (Drive copy)||462||Service
+Dynamic sparing normal end (Drive copy)||4c8||Service
+Dynamic sparing normal end (Drive copy)||4c9||Service
+Dynamic sparing abnormal end (Drive copy)||463||Moderate
+Dynamic sparing abnormal end (Drive copy)||4ca||Moderate
+Dynamic sparing abnormal end (Drive copy)||4cb||Moderate
+Dynamic sparing discontinued (Drive copy)||464||Service
+Dynamic sparing discontinued (Drive copy)||4cc||Service
+Dynamic sparing discontinued (Drive copy)||4cd||Service
+Dynamic sparing warning end (With blockade LDEV or some error) (Drive copy)||465||Service
+Dynamic sparing warning end (With blockade LDEV or some error) (Drive copy)||4ce||Service
+Dynamic sparing warning end (With blockade LDEV or some error) (Drive copy)||4cf||Service
+Collection Copy/Copyback disabled(drive replace)||468||Moderate
+Collection Copy/Copyback disabled(drive replace)||469||Moderate
+Drive Copy/Correction Copy delay||46a||Moderate
+Flash module drive initialization failed||4c4||Moderate
+Flash module drive initialization failed||4c5||Moderate
+Drive temporary error||500||Service
+Drive temporary error||501||Service
+Drive media error||502||Service
+Drive media error||503||Service
+Flash drive End of life||50a||Service
+Flash drive End of life||50b||Service
+Flash module drive End of life||50c||Service
+Flash module drive End of life||50d||Service
+Flash module drive firmware version warning||50f000||Moderate
+PECB blocking||2153||Moderate
+SWPK blocking||2154||Moderate
+PECB warning||2157||Moderate
+Expander microprogram replacement failure||4a80||Moderate
+PDEV Erase Start||4c1||Service
+PDEV Erase Start||4d6||Service
+PDEV Erase Start||4d7||Service
+PDEV Erase Normal End||4c2||Service
+PDEV Erase Normal End||4d8||Service
+PDEV Erase Normal End||4d9||Service
+PDEV Erase Abnormal End||4c3||Service
+PDEV Erase Abnormal End||4da||Service
+PDEV Erase Abnormal End||4db||Service
+External storage system connection device blockade||efd000||Serious
+Abnormal end of Write processing in External storage system||ef5||Moderate
+Abnormal end of Read processing in External storage system||ff5||Moderate
+Cache overload condition||491000||Service
+Format complete||4100||Service
+Quick Format finish||410100||Service
+Audit Log lost||180000||Moderate
+Detected a specific error code||1c0000||Service
+DB power off||ac50||Moderate
+DB power recovered||ac51||Service
+Controller Chassis  was set to power errormode||ac6000||Moderate
+DKC was released from power error mode||ac6100||Service
+When Controller Chassis was set to power error mode, Urgent||ac6200||Service
+When Controller Chassis was set to power error mode, Urgent||ac6300||Moderate
+Server failure||ac8001||Serious
+License key has expired||7ff7||Moderate
+Allowed capacity was exceeded||7ff8||Moderate
+Program Product was invalidated due to expiration of premise Program Product||7ff9||Moderate
+CUDG detected error||760000||Moderate
+TC started the initialcopy or out of sync for this volume||d00||Service
+TC completed the initial copy for this volume||d01||Service
+TC for this volume was deleted||d02||Service
+Status of the R-VOL is changed||d1z||Service
+TC for this volume was suspended (Due to an unrecoverable failure on the remote copy connections)||d40||Serious
+TC for this volume was suspended (Due to an unrecoverable failure on the M-VOL or the remote copy connections)||d41||Serious
+TC for this volume was suspended (Due to an unrecoverable failure on the R-VOL)||d42||Serious
+TC for this volume was suspended (Due to an internal error condition detected by the RCU)||d44||Serious
+TC for this volume was suspended (Caused by Delete pair operation was issued to the R-VOL)||d45||Serious
+The R-VOL has suspended (Due to an unrecoverable failure on the remote copy connections)||d46||Serious
+The R-VOL has suspended (Due to an unrecoverable failure on the R-VOL)||d47||Serious
+Status of the M-VOL was not consistent with the R-VOL||d4f||Serious
+Logical path(s) on the remote copy connections was logically blocked (Due to an error conditions)||2180||Moderate
+Differential area blocking (*1)||4d1||Serious
+ShadowImage Copy abnormal end||47d||Moderate
+Forcible suspend by SM volatile||47e700||Moderate
+Volume Migration  abnormal end||47f||Moderate
+Forcible suspend by SM volatile||47ec00||Moderate
+Thin Image Option  abnormal end||4b3||Moderate
+Warning for depletion of cache management devices||670000||Moderate
+SI||7ff102||Service
+TI||7ff104||Service
+Volume Migration||7ff106||Service
+Pool blocking||602||Moderate
+Shared Memory Space Warning||603000||Moderate
+Exceeded Threshold of actual pool use rate||604||Moderate
+Actual pool use rate reaches upper limit||605||Moderate
+Exceeded Fixed outage||606||Moderate
+Shared Memory Full||624000||Moderate
+DP Pool error is detected||623||Moderate
+Shared Memory Full (DP)||624000||Moderate
+DP Pool LDEV blockade||627||Serious
+DP Protect attribute setting of Data Retention Utility||628000||Serious
+Exceeded Warning Threshold of DP Pool use rate||629||Moderate
+Actual DP Pool use rate reaches upper limit||62a||Moderate
+Threshold of DP Pool use rate remains exceeded||62b000||Moderate
+Exceeded Depletion Threshold of DP Pool use rate||62c||Moderate
+Exceeded Fixed outage||62d||Moderate
+TI pair DP pool exceeded depletion threshold||62e||Moderate
+Auto pool expansion failed due to system error||631||Moderate
+Auto pool expansion failed due to pool error||632||Moderate
+Failed to create, expand, or delete pools||633||Moderate
+Auto pool expansion failed due to no more LDEV IDs||634||Moderate
+Tier relocation is not complete||641||Service
+No free encryption key||660100||Moderate
+Remaining free encryption key warning||660200||Service
+Acquisition of encryption key from KMS failed||6610||Moderate
+A volume to be used by the UR was defined||d80||Service
+The volume being used by the UR began a copying||d81||Service
+The volume being used by the UR completed a copying||d82||Service
+The volume being used by the UR received a request for suspension||d83||Service
+The volume being used by the UR completed a suspension transaction||d84||Service
+The volume being used by the UR received a request for deletion||d85||Service
+The volume being used by the UR completed the deletion||d86||Service
+The volume being used by the UR was defined (placed in the PSUS status immediately)||d87||Service
+A Delta volume to be used by the URMF/UR was defined||d88||Service
+A Delta volume to be used by the URMF/UR was redefine||d89||Service
+A change to an S-VOL was received from the MCU||d9z||Service
+A change to an S-VOL was received from the RCU||daz||Service
+A volume being used by a P-VOL was suspended (Path recovery was impossible)||dc0||Serious
+A volume being used by a P-VOL was suspended (A failure on the MCU side was detected)||dc1||Serious
+A volume being used by a P-VOL was suspended (Suspension of an S-VOL failure was detected)||dc2||Serious
+A volume being used by a P-VOL was suspended (Suspension of an S-VOL was detected)||dc4||Serious
+A volume being used by a P-VOL was suspended (Deletion of an S-VOL pair was detected)||dc5||Serious
+A volume being used by an S-VOL was suspended (Path recovery was impossible)||dc6||Serious
+A volume being used by an S-VOL was suspended (A failure on the RCU side was detected)||dc7||Serious
+A volume being used by an S-VOL was suspended (P/ S OFF on the MCU side was detected)||dc8||Service
+A Delta volume being used by a P-VOL was suspended||dc9||Service
+Pair suspend (Spread by error of another Affiliate)||dca||Serious
+UR M-JNL Meta FULL WARNING||dce0||Moderate
+UR M-JNL Data FULL WARNING||dce1||Moderate
+UR R-JNL Meta FULL WARNING||dce2||Moderate
+UR R-JNL Data FULL WARNING||dce3||Moderate
+The UR Read JNL was interrupted for one minute (A failure on the MCU side was detected)||dcf0||Moderate
+The UR Read JNL was interrupted for five minutes (A failure on the MCU side was detected)||dcf1||Serious
+The UR Read JNL was interrupted for one minute (A failure on the RCU side was detected)||dcf2||Moderate
+The UR Read JNL was interrupted for five minutes (A failure on the RCU side was detected)||dcf3||Serious
+A volume being used by a GAD was suspended(Due to an unrecoverable failure on the remote copy connections)||dd0||Serious
+A volume being used by a GAD was suspended (volume failure)||dd1||Serious
+A volume being used by a GAD was suspended(Internal error failure)||dd2||Serious
+In GAD, the P-VOL status was not consistent with the S-VOL status||dd3||Serious
+Quorum Disk Restore||dee0||Service
+Quorum Disk Blocked||def0||Serious
+dedupe and compression operation error detection||6800||Moderate
+Operation error of deduplication system data volume automatic deletion was detected.||681||Moderate
+Deduplication system data volume automatic deletion was suspended.||682000||Moderate
+Failure in a server registered by HSAE||7c1||Moderate
+Volume I/O upper limit reached||ee0000||Service
+Volume I/O lower limit not reached||ee1000||Service
+Volume I/O response delay||ee2000||Service
