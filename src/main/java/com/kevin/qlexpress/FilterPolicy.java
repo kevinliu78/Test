@@ -1,7 +1,7 @@
 package com.kevin.qlexpress;
 
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson2.JSONArray;
+import com.alibaba.fastjson2.JSONObject;
 import org.apache.commons.lang.StringUtils;
 
 import java.util.ArrayList;

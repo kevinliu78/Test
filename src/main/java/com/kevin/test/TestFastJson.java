@@ -1,8 +1,8 @@
 package com.kevin.test;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson2.JSON;
+import com.alibaba.fastjson2.JSONArray;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.*;
 
@@ -19,7 +19,7 @@ public class TestFastJson {
         for (Map.Entry<String, Object> entry : entries) {
             String key = entry.getKey();
             String value = entry.getValue().toString();
-            List<String> list = JSONArray.parseArray(value, String.class);
+            List<String> list = JSON.parseArray(value, String.class);
             for (String ss : list) {
                 result += (key + ":" + ss + ",");
             }
@@ -86,31 +86,31 @@ public class TestFastJson {
     }
 
 
-    public static Map<String, List<String>> userGroupTags(String tags) {
-        if (tags == null || "".equals(tags)) {
-            return new HashMap<>();
-        }
+//    public static Map<String, List<String>> userGroupTags(String tags) {
+//        if (tags == null || "".equals(tags)) {
+//            return new HashMap<>();
+//        }
+//
+//        JSONObject jsonObject = JSONObject.parseObject(tags);
 
-        JSONObject jsonObject = JSONObject.parseObject(tags);
-
-        Map<String, Object> innerMap = jsonObject.getInnerMap();
-
-        Set<Map.Entry<String, Object>> entries = innerMap.entrySet();
-        Map<String, List<String>> resultMap = new HashMap<>();
-
-        for (Map.Entry<String, Object> entry : entries) {
-            List<String> strList = new ArrayList<>();
-            String key = entry.getKey();
-            String value = JSONArray.toJSONString(entry.getValue());
-
-            List<String> valueStrings = JSON.parseArray(value, String.class);
-            for (String string : valueStrings) {
-                if (!strList.contains(string)) {
-                    strList.add(string);
-                }
-            }
-            resultMap.put(key, strList);
-        }
-        return resultMap;
-    }
+//        Map<String, Object> innerMap = jsonObject.getInnerMap();
+//
+//        Set<Map.Entry<String, Object>> entries = innerMap.entrySet();
+//        Map<String, List<String>> resultMap = new HashMap<>();
+//
+//        for (Map.Entry<String, Object> entry : entries) {
+//            List<String> strList = new ArrayList<>();
+//            String key = entry.getKey();
+//            String value = JSONArray.toJSONString(entry.getValue());
+//
+//            List<String> valueStrings = JSON.parseArray(value, String.class);
+//            for (String string : valueStrings) {
+//                if (!strList.contains(string)) {
+//                    strList.add(string);
+//                }
+//            }
+//            resultMap.put(key, strList);
+//        }
+//        return resultMap;
+//    }
 }

@@ -1,6 +1,6 @@
 package com.kevin.test;
 
-import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 import com.kevin.util.NumberUtil;
 
 import java.text.DecimalFormat;

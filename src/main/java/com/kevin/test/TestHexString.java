@@ -16,6 +16,9 @@ public class TestHexString {
         System.out.println(messageCode);
 
         System.out.println(getEventLevel("warning"));
+        Long a = 10L;
+        Long b = 11L;
+        System.out.println(a.compareTo(b));
     }
 
 

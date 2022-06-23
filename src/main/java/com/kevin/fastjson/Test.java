@@ -1,7 +1,5 @@
 package com.kevin.fastjson;
 
-import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.serializer.SerializerFeature;
 
 /**
  * @Program: Test
@@ -20,9 +18,9 @@ public class Test {
         switchVO2.setName("s1");
         switchVO2.setVendor("Brocade");
         switchVO2.setModel(null);
-        JSONObject jsonObject1 = JSONObject.parseObject(JSONObject.toJSONString(switchVO1, SerializerFeature.WriteNullStringAsEmpty));
-        JSONObject jsonObject2 = JSONObject.parseObject(JSONObject.toJSONString(switchVO2, SerializerFeature.WriteNullStringAsEmpty));
-        System.out.println(jsonObject1);
-        System.out.println(jsonObject2);
+//        JSONObject jsonObject1 = JSONObject.parseObject(JSONObject.toJSONString(switchVO1, SerializerFeature.WriteNullStringAsEmpty));
+//        JSONObject jsonObject2 = JSONObject.parseObject(JSONObject.toJSONString(switchVO2, SerializerFeature.WriteNullStringAsEmpty));
+//        System.out.println(jsonObject1);
+//        System.out.println(jsonObject2);
     }
 }

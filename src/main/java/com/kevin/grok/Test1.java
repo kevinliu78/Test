@@ -1,6 +1,6 @@
 package com.kevin.grok;
 
-import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 import io.krakens.grok.api.Grok;
 import io.krakens.grok.api.GrokCompiler;
 import io.krakens.grok.api.Match;

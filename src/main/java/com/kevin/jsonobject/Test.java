@@ -1,6 +1,7 @@
 package com.kevin.jsonobject;
 
-import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson2.JSON;
+import com.alibaba.fastjson2.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +25,7 @@ public class Test {
         result.add(compareImportRuleVO);
         String param = JSONObject.toJSONString(result);
 
-        List<CompareImportRuleVO> compareImportRuleVOS = JSONObject.parseArray(param, CompareImportRuleVO.class);
+        List<CompareImportRuleVO> compareImportRuleVOS = JSON.parseArray(param, CompareImportRuleVO.class);
         for (CompareImportRuleVO c : compareImportRuleVOS){
             System.out.println(JSONObject.toJSONString(c));
         }
