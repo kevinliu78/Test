@@ -1,0 +1,32 @@
+package com.pbn.kevin.jsonobject;
+
+import com.alibaba.fastjson.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * @Program: Test
+ * @Description:
+ * @Author: Liuws
+ * @Date: 2022-04-12 16:35:10
+ **/
+public class Test {
+
+    public static void main(String[] args) {
+        CompareImportRuleVO compareImportRuleVO = new CompareImportRuleVO();
+        compareImportRuleVO.setImportRuleId(1);
+        compareImportRuleVO.setCurrentRuleId(1);
+        compareImportRuleVO.setCompareRuleOperationType(1);
+        compareImportRuleVO.setFileName("sss");
+        compareImportRuleVO.setMergeFileName("aaaa");
+        List<CompareImportRuleVO> result = new ArrayList<>();
+        result.add(compareImportRuleVO);
+        String param = JSONObject.toJSONString(result);
+
+        List<CompareImportRuleVO> compareImportRuleVOS = JSONObject.parseArray(param, CompareImportRuleVO.class);
+        for (CompareImportRuleVO c : compareImportRuleVOS){
+            System.out.println(JSONObject.toJSONString(c));
+        }
+    }
+}

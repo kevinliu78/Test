@@ -7,6 +7,7 @@ package com.pbn.kevin.qlexpress;
 public class Alarm {
     private Integer alarmLevel;
     private String alarmDesc;
+    private String upTime;
 
     public Alarm() {
     }
@@ -25,5 +26,13 @@ public class Alarm {
 
     public void setAlarmDesc(String alarmDesc) {
         this.alarmDesc = alarmDesc;
+    }
+
+    public String getUpTime() {
+        return upTime;
+    }
+
+    public void setUpTime(String upTime) {
+        this.upTime = upTime;
     }
 }

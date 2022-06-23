@@ -16,7 +16,7 @@ public class Test {
         policy.setName("test");
         policy.setDesc("test");
         policy.setPriority(0);
-        policy.setContent(content2);
+        policy.setContent(content);
 
         Alarm alarm = new Alarm();
 //        alarm.setAlarmDesc("MAPS-1003 Port 288 , Condition=ALL_E_PORTS(RX/hour>60.00), Current Value:[RX,63.70 %], RuleName=CPIC_ALL_E_PORTSRX_60, Dashboard Category=Traffic Performance.");
@@ -26,15 +26,15 @@ public class Test {
         boolean b = policy.doMatch(alarm);
         System.out.println(b);
 
-        FilterPolicy policy2 = new FilterPolicy();
-        policy2.setId(2);
-        policy2.setStatus(1);
-        policy2.setName("test2");
-        policy2.setDesc("test2");
-        policy2.setPriority(0);
-        policy2.setContent(content3);
-
-        System.out.println(policy2.doMatch(alarm));
+//        FilterPolicy policy2 = new FilterPolicy();
+//        policy2.setId(2);
+//        policy2.setStatus(1);
+//        policy2.setName("test2");
+//        policy2.setDesc("test2");
+//        policy2.setPriority(0);
+//        policy2.setContent(content3);
+//
+//        System.out.println(policy2.doMatch(alarm));
 
     }
 }

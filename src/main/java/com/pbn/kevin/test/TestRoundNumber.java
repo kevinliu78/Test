@@ -9,12 +9,19 @@ import com.pbn.kevin.util.ConfigUtil;
  * @Description 类描述
  */
 public class TestRoundNumber {
-	public static void main(String[] args) {
-		float a = 43.809643f;
-		float b = -43.809643f;
-		
-		
-		System.out.println(ConfigUtil.roundNumber(a));
-		System.out.println(ConfigUtil.roundNumber(b));
-	}
+    public static void main(String[] args) {
+        float a = 43.809643f;
+        float b = -43.809643f;
+
+
+        System.out.println(ConfigUtil.roundNumber(a));
+        System.out.println(ConfigUtil.roundNumber(b));
+
+        for (int i = 0; i < 10; i++) {
+
+            System.out.print(((int) (Math.random() * 99) + 1) + "\t");
+
+        }
+
+    }
 }
