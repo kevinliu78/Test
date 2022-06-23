@@ -31,7 +31,7 @@
 	</bean>
 	
 	<!-- 用户函数配置  请在这里定制您自己的函数-->
-	<bean class="com.pbn.kevin.IKExpression.TestFunctions">
+	<bean class="com.kevin.IKExpression.TestFunctions">
 		<function name="问好" method="sayHello">
 			<parameter-type>java.lang.String</parameter-type>
 		</function>
