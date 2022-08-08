@@ -17,13 +17,13 @@ public class Test {
 
     public static void main(String[] args) {
         List<String> addressList = new ArrayList<>();
-        addressList.add("102.168.135.1");
-        addressList.add("102.168.135.2");
+        addressList.add("102.168.135.215");
+        addressList.add("102.168.135.15");
 //        addressList.add("102.168.135.3");
 //        addressList.add("102.168.135.4");
 //        addressList.add("102.168.135.5");
         Map<String, Integer> map = new HashMap<>();
-        for (int i = 1; i <= 100000; i++) {
+        for (int i = 1; i <= 10000; i++) {
             String addr = hashJob(i, addressList);
             if (map.containsKey(addr)) {
                 Integer count = map.get(addr);

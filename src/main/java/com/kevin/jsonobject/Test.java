@@ -29,5 +29,10 @@ public class Test {
         for (CompareImportRuleVO c : compareImportRuleVOS){
             System.out.println(JSONObject.toJSONString(c));
         }
+
+        Integer currentRuleId = compareImportRuleVO.getCurrentRuleId();
+        System.out.println(compareImportRuleVO.getCurrentRuleId());
+        compareImportRuleVO.setCurrentRuleId(10);
+        System.out.println(compareImportRuleVO.getCurrentRuleId());
     }
 }
