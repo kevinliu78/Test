@@ -1,7 +1,7 @@
 package com.kevin.consistencyhashing;
 
 /**
- * @Program: Test
+ * @Program: DefaultLockByKeyTest
  * @Description:
  * @Author: Liuws
  * @Date: 2022-06-07 17:33:00

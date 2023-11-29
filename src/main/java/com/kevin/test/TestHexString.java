@@ -1,7 +1,7 @@
 package com.kevin.test;
 
 /**
- * @Program: Test
+ * @Program: DefaultLockByKeyTest
  * @Description:
  * @Author: Liuws
  * @Date: 2022-06-16 14:40:23
@@ -15,10 +15,24 @@ public class TestHexString {
         messageCode = "0X" + Long.toHexString(Long.parseLong(messageCode)).toUpperCase();
         System.out.println(messageCode);
 
+        long result = Long.parseLong(messageCode.substring(2), 16);
+        System.out.println(result);
+
         System.out.println(getEventLevel("warning"));
         Long a = 10L;
         Long b = 11L;
         System.out.println(a.compareTo(b));
+
+
+        String hexString = "0X10A0001";
+        long result1 = Long.parseLong(hexString.substring(2), 16);
+        System.out.println(result1);
+
+
+
+        String messageCode1 = "655649";
+        messageCode1 = "0X" + Long.toHexString(Long.parseLong(messageCode1)).toUpperCase();
+        System.out.println(messageCode1);
     }
 
 

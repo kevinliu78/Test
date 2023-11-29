@@ -1,10 +1,7 @@
 package com.kevin.hds;
 
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.*;
@@ -44,7 +41,7 @@ public class TestImportErrorCode {
                             /* The null cell is not in row.cellIterator()*/
                             for (Iterator<Cell> cells = row.cellIterator(); cells.hasNext(); ) {
                                 Cell cell = cells.next();
-                                String value = cell.getCellType() == Cell.CELL_TYPE_NUMERIC ? cell.getNumericCellValue() + "" : cell.getStringCellValue().trim();
+                                String value = cell.getCellType() == CellType.NUMERIC ? cell.getNumericCellValue() + "" : cell.getStringCellValue().trim();
                                 if (!value.equals("")) {
                                     isNullRow = false;
                                 }
@@ -58,7 +55,7 @@ public class TestImportErrorCode {
                                 Cell errorCodeCell = row.getCell(1);
                                 String errorCode = "";
                                 if (errorCodeCell != null) {
-                                    errorCode = errorCodeCell.getCellType() == Cell.CELL_TYPE_NUMERIC ? (int) (errorCodeCell.getNumericCellValue()) + "" : errorCodeCell.getStringCellValue().trim();
+                                    errorCode = errorCodeCell.getCellType() == CellType.NUMERIC ? (int) (errorCodeCell.getNumericCellValue()) + "" : errorCodeCell.getStringCellValue().trim();
                                     errorCode = errorCode.replaceAll("[XxYy]", "%");
                                     if (errorCode.contains("%")){
                                         errorCode = errorCode.substring(0, errorCode.indexOf("%"));

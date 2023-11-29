@@ -2,6 +2,7 @@ package com.kevin.test;
 
 import com.alibaba.fastjson2.JSONObject;
 import com.kevin.util.ConfigUtil;
+import com.kevin.util.DateFormatUtil;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -31,6 +32,41 @@ public class TestDateFormate {
         System.out.println(JSONObject.toJSONString(list));
         listSort(list);
         System.out.println(JSONObject.toJSONString(list));
+
+
+        long t1 = System.currentTimeMillis();
+        System.out.println(DateFormatUtil.formatDateTime24(new Date(t1)));
+
+        String time = "2021-12-28 13:00:00";
+        Date date1 = DateFormatUtil.parseDateTime24(time);
+        System.out.println(DateFormatUtil.formatDateTime24(date1));
+        System.out.println(time.substring(11, 19));
+        System.out.println(time.substring(5, 16));
+        System.out.println(DateFormatUtil.getLast24HoursTime());
+
+        long dataTimeMillis = System.currentTimeMillis();
+        int step = 3600*24;
+        if (step>=3600){
+            //时间对齐处理
+            System.out.println(DateFormatUtil.formatDateTime24(new Date(dataTimeMillis)));
+            dataTimeMillis = (dataTimeMillis / (3600 * 1000)) * (3600 * 1000);
+            System.out.println(DateFormatUtil.formatDateTime24(new Date(dataTimeMillis)));
+        }else{
+            //时间对齐处理
+            System.out.println(DateFormatUtil.formatDateTime24(new Date(dataTimeMillis)));
+            dataTimeMillis = (dataTimeMillis / (step * 1000)) * (step * 1000);
+            System.out.println(DateFormatUtil.formatDateTime24(new Date(dataTimeMillis)));
+        }
+        Date requestDate = DateFormatUtil.getZeroDateBeforeWeek();
+        String requestTime = DateFormatUtil.formatDateTime24(requestDate);
+        String afterDayTime = DateFormatUtil.getAfterDayTime(requestTime);
+        System.out.println(afterDayTime);
+
+        int clearPeriod = 2;
+        //保留固定间隔内的告警
+        Date zeroDateBeforePriod = DateFormatUtil.getZeroDateBeforePriod(clearPeriod - 1);
+        //需要清除这个时间以前的告警
+        System.out.println(DateFormatUtil.formatDateTime24(zeroDateBeforePriod));
     }
 
     private static void listSort(List<Double> list) {

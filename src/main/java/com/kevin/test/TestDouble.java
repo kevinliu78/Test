@@ -4,8 +4,7 @@ import com.alibaba.fastjson2.JSONObject;
 import com.kevin.util.NumberUtil;
 
 import java.text.DecimalFormat;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author kevin
@@ -43,5 +42,50 @@ public class TestDouble {
         System.out.println(map.get("age1") == null);
 		JSONObject json = new JSONObject();
 		System.out.println(json.getString("aaaa") == null);
+
+
+		double totalBandwidthRate = 80;
+		int compareTo = new Double(80).compareTo(totalBandwidthRate);
+		System.out.println(compareTo);
+
+		DecimalFormat df1 = new DecimalFormat("0.#########");
+		double aa = 2.675858E-7;
+		System.out.println("aa=="+df1.format(aa));
+
+		double tau = -1.0;
+		double slope = -0.123;
+
+		boolean tauResult = tau < -0.2;
+		boolean slopeResult = slope < -0.1;
+
+		System.out.println(tauResult);
+		System.out.println(slopeResult);
+
+		double slope1 = -0.009255172413793113;
+		double slope2 = -0.010388157894736873;
+		double slope3 = -0.011539473684210596;
+		boolean slopeResult1 = Math.abs(slope2)>=0;
+		boolean slopeResult2 = Math.abs(slope2)<=0.02;
+		System.out.println(Math.abs(slope2));
+		System.out.println(slopeResult1);
+		System.out.println(slopeResult2);
+
+		System.out.println(nextDouble(70,80));
+		List<Double> list = new ArrayList<>();
+		for (int i=0;i<=30;i++){
+			list.add(nextDouble(70,80));
+		}
+		System.out.println(list);
+
+		long l1 = 3502;
+		long l2 = 1500;
+		System.out.println(l1/l2);
+	}
+
+
+	public static double nextDouble(final double min, final double max) {
+		double a = min + ((max - min) * new Random().nextDouble());
+		DecimalFormat df1 = new DecimalFormat("0.##");
+		return Double.parseDouble(df1.format(a));
 	}
 }

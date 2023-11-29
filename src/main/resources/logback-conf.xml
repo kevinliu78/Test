@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false" scan="true" scanPeriod="1 seconds">
+
+    <contextName>logback</contextName>
+    <springProperty scope="context" name="log.path" source="log.path" defaultValue="/onesrm/logs/services" />
+    <springProperty scope="context" name="spring.application.name" source="spring.application.name" defaultValue="default-application-name" />
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %contextName [%thread] %-5level %logger{36} - %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <appender name="file" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 正在记录的日志文件的路径及文件名 -->
+        <file>${log.path}/${spring.application.name}.log</file>
+        <!--日志文件输出格式 -->
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n</pattern>
+            <charset>UTF-8</charset> <!-- 设置字符集 -->
+        </encoder>
+        <!-- 日志记录器的滚动策略，按index滚动 -->
+        <!--        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">-->
+        <!-- 日志归档 -->
+        <!--            <fileNamePattern>${log.path}/${spring.application.name}-%d{yyyy-MM-dd}.%i.log</fileNamePattern>-->
+        <!--            <maxFileSize>5MB</maxFileSize>-->
+        <!--            <totalSizeCap>10MB</totalSizeCap>-->
+        <!--            <maxHistory>2</maxHistory>-->
+        <!--            <cleanHistoryOnStart>true</cleanHistoryOnStart>-->
+        <!--        </rollingPolicy>-->
+        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+            <fileNamePattern>${log.path}/${spring.application.name}.%i.log</fileNamePattern>
+            <minIndex>1</minIndex>
+            <maxIndex>3</maxIndex>
+        </rollingPolicy>
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <maxFileSize>50MB</maxFileSize>
+        </triggeringPolicy>
+    </appender>
+
+    <!-- <logger name="com.xxl.job.admin.dao" level="DEBUG" /> -->
+
+    <root level="info">
+        <appender-ref ref="console" />
+        <appender-ref ref="file" />
+    </root>
+
+</configuration>

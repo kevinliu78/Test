@@ -85,6 +85,24 @@ public class DateFormatUtil {
   }
 
   /**
+   * @Description 获取固定日期前的时间点
+   * @Author Liuws
+   * @param priod
+   * @Date 2023/3/29 18:04
+   * @return java.util.Date
+   */
+  public synchronized static Date getZeroDateBeforePriod(int priod) {
+    Calendar calendar = Calendar.getInstance();
+    calendar.setTime(new Date());
+    calendar.set(Calendar.HOUR_OF_DAY, 0);
+    calendar.set(Calendar.MINUTE, 0);
+    calendar.set(Calendar.SECOND, 0);
+    calendar.add(Calendar.DAY_OF_YEAR, -priod);
+    Date zero = calendar.getTime();
+    return zero;
+  }
+
+  /**
    * 获取最近1月的时间
    *
    * @return
@@ -175,6 +193,18 @@ public class DateFormatUtil {
         return null;
       }
       return sdfDateTime24.parse(date);
+    } catch (ParseException e) {
+      e.printStackTrace();
+    }
+    return null;
+  }
+
+  public synchronized static Date parseDateTime24Short(String date) {
+    try {
+      if (date == null) {
+        return null;
+      }
+      return sdfDateTime24Short.parse(date);
     } catch (ParseException e) {
       e.printStackTrace();
     }

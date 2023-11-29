@@ -10,7 +10,7 @@ public class Test {
 //	static {
 //		System.out.println("aaaaaaaaaaaa");
 //	}
-//	public Test() {
+//	public DefaultLockByKeyTest() {
 //		System.out.println(j+"constructor");
 //	}
 //	

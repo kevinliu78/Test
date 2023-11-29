@@ -35,7 +35,7 @@ public class TestLast24HoursTime {
 //        System.out.println("=====================================");
 //        System.out.println(formatDateTime24(new Date(start)));
 //        System.out.println(formatDateTime24(new Date(end)));
-        Date zeroDateBeforeWeek = getZeroDateBeforeWeek();
+        Date zeroDateBeforeWeek = getZeroDateBeforePriodk(2);
         System.out.println(formatDateTime24(zeroDateBeforeWeek));
     }
 
@@ -90,6 +90,22 @@ public class TestLast24HoursTime {
         calendar.add(Calendar.DAY_OF_YEAR, -6);
         Date zero = calendar.getTime();
 
+        return zero;
+    }
+
+    /**
+     * 获取最近七天的时间
+     *
+     * @return
+     */
+    public synchronized static Date getZeroDateBeforePriodk(int priod) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(new Date());
+        calendar.set(Calendar.HOUR_OF_DAY, 0);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        calendar.add(Calendar.DAY_OF_YEAR, -priod);
+        Date zero = calendar.getTime();
         return zero;
     }
 }
