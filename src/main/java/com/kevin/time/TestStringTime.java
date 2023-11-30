@@ -17,7 +17,7 @@ public class TestStringTime {
     public static void main(String[] args) throws ParseException {
 
 //        String startTime = "<span style='color:#F56C6C '>300</span>秒内;开始时间:2022-05-17 14:39:00,结束时间:2022-05-17 14:40:00";
-        String startTime = "ceshi;测试;wandan;5分钟内;存储 写响应时间大于1累计1次，产生警告级别告警;当前值:[1.4,1.08],开始时间:2023-11-29 18:00:00,结束时间:2023-11-29 18:00:00";
+        String startTime = "qqqqceshi;测试;wandan;5分钟内;存储 写响应时间大于1累计1次，产生警告级别告警;当前值:[1.4,1.08],开始时间:2023-11-29 18:00:00,结束时间:2023-11-29 18:00:00";
 //        String startTime = "5分钟内;存储 写响应时间大于1累计1次，产生警告级别告警;当前值:[1.4,1.08],开始时间:2023-11-29 18:00:00,结束时间:2023-11-29 18:00:00";
         //1秒内;存储 写响应时间大于1累计1次，产生警告级别告警;当前值:[1.36,1.04],开始时间:2023-11-29 17:30:00,结束时间:2023-11-29 17:30:00
         startTime=startTime.replaceAll("<span style='color:#F56C6C '>","");
