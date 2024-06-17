@@ -4,6 +4,7 @@ import com.alibaba.fastjson2.JSONObject;
 import com.kevin.util.ConfigUtil;
 import com.kevin.util.DateFormatUtil;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
@@ -45,7 +46,7 @@ public class TestDateFormate {
         System.out.println(DateFormatUtil.getLast24HoursTime());
 
         long dataTimeMillis = System.currentTimeMillis();
-        int step = 3600*24;
+        int step = 900;
         if (step>=3600){
             //时间对齐处理
             System.out.println(DateFormatUtil.formatDateTime24(new Date(dataTimeMillis)));
@@ -57,16 +58,23 @@ public class TestDateFormate {
             dataTimeMillis = (dataTimeMillis / (step * 1000)) * (step * 1000);
             System.out.println(DateFormatUtil.formatDateTime24(new Date(dataTimeMillis)));
         }
-        Date requestDate = DateFormatUtil.getZeroDateBeforeWeek();
-        String requestTime = DateFormatUtil.formatDateTime24(requestDate);
-        String afterDayTime = DateFormatUtil.getAfterDayTime(requestTime);
-        System.out.println(afterDayTime);
+//        Date requestDate = DateFormatUtil.getZeroDateBeforeWeek();
+//        String requestTime = DateFormatUtil.formatDateTime24(requestDate);
+//        String afterDayTime = DateFormatUtil.getAfterDayTime(requestTime);
+//        System.out.println(afterDayTime);
+//
+//        int clearPeriod = 2;
+//        //保留固定间隔内的告警
+//        Date zeroDateBeforePriod = DateFormatUtil.getZeroDateBeforePriod(clearPeriod - 1);
+//        //需要清除这个时间以前的告警
+//        System.out.println(DateFormatUtil.formatDateTime24(zeroDateBeforePriod));
+//
+//        String day = "2024-04-02 17:10:00";
+//        System.out.println(DateFormatUtil.formatDateTime24(DateFormatUtil.getZeroDateByDay(DateFormatUtil.parseDateTime24(day))));
+//        System.out.println(DateFormatUtil.getZeroDateByDay(DateFormatUtil.parseDateTime24(day)).getTime());
+//        System.out.println(DateFormatUtil.getNextDayZeroDateByDay(DateFormatUtil.parseDateTime24(day)).getTime());
+//        DecimalFormat df = new DecimalFormat("0.00");
 
-        int clearPeriod = 2;
-        //保留固定间隔内的告警
-        Date zeroDateBeforePriod = DateFormatUtil.getZeroDateBeforePriod(clearPeriod - 1);
-        //需要清除这个时间以前的告警
-        System.out.println(DateFormatUtil.formatDateTime24(zeroDateBeforePriod));
     }
 
     private static void listSort(List<Double> list) {

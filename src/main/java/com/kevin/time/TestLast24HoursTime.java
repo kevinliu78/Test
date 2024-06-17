@@ -1,5 +1,7 @@
 package com.kevin.time;
 
+import com.kevin.util.DateFormatUtil;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -37,6 +39,13 @@ public class TestLast24HoursTime {
 //        System.out.println(formatDateTime24(new Date(end)));
         Date zeroDateBeforeWeek = getZeroDateBeforePriodk(2);
         System.out.println(formatDateTime24(zeroDateBeforeWeek));
+
+        int clearPeriod = 2;
+        //保留固定间隔内的告警
+        Date zeroDateBeforePriod = DateFormatUtil.getZeroDateBeforePriod(clearPeriod-1);
+        //需要清除这个时间以前的告警
+        String requestTime = DateFormatUtil.formatDateTime24(zeroDateBeforePriod);
+        System.out.println(requestTime);
     }
 
     /**
